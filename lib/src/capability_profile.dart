@@ -21,6 +21,7 @@ class CapabilityProfile {
 
   /// Public factory
   static Future<CapabilityProfile> load({String name = 'default'}) async {
+    print("Loading CapabilityProfile '$name'...");
     final content = await rootBundle
         .loadString('packages/esc_pos_utils/resources/capabilities.json');
     Map capabilities = json.decode(content);
